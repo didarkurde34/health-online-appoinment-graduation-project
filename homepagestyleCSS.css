@@ -1,0 +1,553 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 30px;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+}
+
+.nav-item {
+    display: flex;
+}
+
+.nav-item ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: rgb(95, 111, 255);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.buttom-create-account button {
+    height: 40px;
+    padding: 0 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(95, 111, 255);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.buttom-create-account button:hover {
+    background-color: rgb(75, 90, 230);
+}
+
+.navbar img {
+    color: white;
+}
+
+/* Menu icon styling */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .navbar .logo{
+        padding-right: 40px;
+    }
+    .nav-item {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        right: 30px;
+        width: 200px;
+        height: auto;
+        border: 1px solid #ddd;
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-item.show {
+        display: flex;
+    }
+
+    .nav-item a {
+        padding: 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-item a:hover {
+        background-color: rgb(240, 240, 240);
+    }
+
+    .nav-item.show {
+        display: flex;
+    }
+
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin: auto;
+    }
+
+    .buttom-create-account button {
+        height: 40px;
+        padding: 0 50px;
+        width: 90%;
+        font-size: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-item-right {
+        display: flex;
+        gap: 10px;
+    }
+}
+
+
+
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #5f6fff;
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    margin: 40px 0;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.hero-cta button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    color: #5f6fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-cta button:hover {
+    background-color: #e6e6ff;
+    transform: scale(1.05);
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero-image img {
+        max-width: 80%;
+    }
+}
+
+
+
+/* Add this to your homepagestyleCSS.css */
+.speciality-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.speciality-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.speciality-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.speciality-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.speciality-item:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
+}
+
+.speciality-item {
+    transition: transform 0.3s ease;
+}
+
+.speciality-item:not(:hover) {
+    transform: translateY(0);
+}
+
+.speciality-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 120px;
+}
+
+.speciality-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #e6f0ff;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.speciality-item p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .speciality-list {
+        gap: 15px;
+    }
+
+    .speciality-item {
+        width: 100px;
+    }
+
+    .speciality-item img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .speciality-item p {
+        font-size: 12px;
+    }
+}
+
+
+
+/* Add this to your homepagestyleCSS.css */
+.doctors-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.doctors-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.doctors-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.doctors-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.doctor-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 240px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e6e6e6;
+}
+
+.doctor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-color: rgb(95, 111, 255);
+}
+
+.doctor-card img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    background-color: #e6f0ff;
+    padding: 10px;
+    border: 2px solid #d9e6ff;
+}
+
+.doctor-info {
+    text-align: center;
+}
+
+.doctor-info h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #2c3e50;
+}
+
+.doctor-info p {
+    font-size: 14px;
+    color: #777;
+}
+
+.availability {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+}
+
+[data-available="true"] .availability {
+    color: green;
+    background-color: #e6ffe6;
+}
+
+[data-available="false"] .availability {
+    color: red;
+    background-color: #ffe6e6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .doctors-list {
+        gap: 15px;
+    }
+
+    .doctor-card {
+        width: calc(50% - 20px); /* Two cards per row with a gap */
+        padding: 15px;
+    }
+
+    .doctor-card img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .doctor-info h3 {
+        font-size: 16px;
+    }
+
+    .doctor-info p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .doctor-card {
+        width: 100%; /* One card per row on very small screens */
+    }
+}
+
+.more-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.more-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: rgb(95, 111, 255);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.more-button a:hover {
+    background-color: rgb(75, 90, 230);
+    transform: scale(1.05);
+}
+
+/* CTA Section */
+.cta-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #5f6fff;
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    margin: 0 0;
+    height: 60vh;
+    margin: 10px 150px ;
+    margin-top: 100px;
+}
+
+.cta-content {
+    max-width: 100%;
+}
+
+.cta-content h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.cta-content button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    color: #5f6fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-content button:hover {
+    background-color: #e6e6ff;
+    transform: scale(1.05);
+}
+
+.cta-image img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    padding-bottom: 55px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cta-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        height: auto;
+        margin: 20px;
+    }
+
+    .cta-content {
+        max-width: 100%;
+        margin-bottom: 20px;
+        order: 1; /* Ensure content appears first */
+    }
+
+    .cta-content h2 {
+        font-size: 28px;
+    }
+
+    .cta-content button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .cta-image {
+        order: 2; /* Ensure image appears last */
+    }
+
+    .cta-image img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-content h2 {
+        font-size: 24px;
+    }
+
+    .cta-content button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .cta-image img {
+        max-width: 90%;
+    }
+}

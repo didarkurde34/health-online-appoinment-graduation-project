@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="homepagestyleCSS.css">
+    <link rel="stylesheet" href="all-doctors.css">
+    <title>All Doctors</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="image/logo.png" alt="Logo" class="logo-img">
+            <span>Prescripto</span>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fi fi-br-menu-burger"></i>
+        </div>
+        <div class="nav-item">
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="all-doctors.html">All Doctors</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="buttom-create-account">
+            <button>Create Account</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <h3>Browse through the doctors specialist.</h3>
+            <ul class="filter-list">
+                <li><button onclick="filterDoctors('all')">All</button></li>
+                <li><button onclick="filterDoctors('General physician')">General physician</button></li>
+                <li><button onclick="filterDoctors('Gynecologist')">Gynecologist</button></li>
+                <li><button onclick="filterDoctors('Dermatologist')">Dermatologist</button></li>
+                <li><button onclick="filterDoctors('Pediatricians')">Pediatricians</button></li>
+                <li><button onclick="filterDoctors('Neurologist')">Neurologist</button></li>
+                <li><button onclick="filterDoctors('Gastroenterologist')">Gastroenterologist</button></li>
+                <li><button onclick="filterDoctors('psporedl')">psporedl</button></li>
+            </ul>
+        </div>
+
+        <!-- Doctors Section -->
+        <div class="doctors-section">
+            <div class="doctors-list" id="doctors-list">
+                <!-- Doctor Card 1 -->
+                <div class="doctor-card" data-specialty="General physician">
+                    <img src="image/doc1.png" alt="Dr. Richard James">
+                    <div class="doctor-info">
+                        <span class="availability">Available</span>
+                        <h3>Dr. Richard James</h3>
+                        <p>General physician</p>
+                    </div>
+                </div>
+                <!-- Doctor Card 2 -->
+                <div class="doctor-card" data-specialty="Gynecologist">
+                    <img src="image/doc2.png" alt="Dr. Emily Larson">
+                    <div class="doctor-info">
+                        <span class="availability">Available</span>
+                        <h3>Dr. Emily Larson</h3>
+                        <p>Gynecologist</p>
+                    </div>
+                </div>
+                <!-- Doctor Card 3 -->
+                <div class="doctor-card" data-specialty="Dermatologist">
+                    <img src="image/doc3.png" alt="Dr. Sarah Patel">
+                    <div class="doctor-info">
+                        <span class="availability">Available</span>
+                        <h3>Dr. Sarah Patel</h3>
+                        <p>Dermatologist</p>
+                    </div>
+                </div>
+                <!-- Doctor Card 4 -->
+                <div class="doctor-card" data-specialty="Pediatricians">
+                    <img src="image/doc4.png" alt="Dr. Christopher Lee">
+                    <div class="doctor-info">
+                        <span class="availability">Available</span>
+                        <h3>Dr. Christopher Lee</h3>
+                        <p>Pediatricians</p>
+                    </div>
+                </div>
+                <!-- Doctor Card 5 -->
+                <div class="doctor-card" data-specialty="Neurologist">
+                    <img src="image/doc5.png" alt="Dr. Jennifer Garcia">
+                    <div class="doctor-info">
+                        <span class="availability">Available</span>
+                        <h3>Dr. Jennifer Garcia</h3>
+                        <p>Neurologist</p>
+                    </div>
+                </div>
+                <!-- Doctor Card 6 -->
+                <div class="doctor-card" data-specialty="Gastroenterologist">
+                    <img src="image/doc6.png" alt="Dr. Andrew Williams">
+                    <div class="doctor-info">
+                        <span class="availability">Available</span>
+                        <h3>Dr. Andrew Williams</h3>
+                        <p>Gastroenterologist</p>
+                    </div>
+                </div>
+
+                <!-- Doctor Card 7 -->
+                <div class="doctor-card" data-specialty="psporedl">
+                    <img src="image/doc7.png" alt="Dr. Andrew Williams">
+                    <div class="doctor-info">
+                        <span class="availability">Available</span>
+                        <h3>Dr. Ava Mitchell</h3>
+                        <p>psporedl</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Filtering -->
+    <script>
+        function toggleMenu() {
+            const navItem = document.querySelector('.nav-item');
+            navItem.classList.toggle('show');
+        }
+
+        function filterDoctors(specialty) {
+            const cards = document.querySelectorAll('.doctor-card');
+            cards.forEach(card => {
+                if (specialty === 'all' || card.dataset.specialty === specialty) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Function to get the query parameter value
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Function to filter doctors based on the specialty
+        function filterDoctorsBySpecialty() {
+            const specialty = getQueryParam('specialty');
+            const cards = document.querySelectorAll('.doctor-card');
+
+            if (specialty && specialty !== 'all') {
+                cards.forEach(card => {
+                    if (card.dataset.specialty === specialty) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            } else {
+                cards.forEach(card => {
+                    card.style.display = 'flex';
+                });
+            }
+        }
+
+        // Call the filter function on page load
+        window.onload = filterDoctorsBySpecialty;
+    </script>
+</body>
+</html>

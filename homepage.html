@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="homepagestyleCSS.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <title>HomePage</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="image/logo.png" alt="Logo" class="logo-img"> <!-- Add your logo image -->
+            <span>Prescripto</span>
+        </div>
+
+        <div class="nav-item">
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="all-doctors.html">All Doctors</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-item-right">
+        <div class="buttom-create-account">
+            <button>Create Account</button>
+        </div>
+
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fi fi-br-menu-burger" style="color: black;"></i><!-- Replace with your custom icon -->
+        </div>
+    </div>
+    </div>
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Book Appointment <br> With Trusted Doctors</h1>
+            <p>Simply browse through our extensive list of trusted doctors, schedule your appointment hassle-free.</p>
+            <div class="hero-cta">
+                <button onclick="window.location.href='all-doctors.html'">Book appointment →</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="image/header_img-DhAi3lLA.png" alt="Doctors">
+        </div>
+    </div>
+
+    <!-- Add this below your hero section in homepage.html -->
+<div class="speciality-section">
+    <h2>Find by Speciality</h2>
+    <p>Simply browse through our extensive list of trusted doctors, schedule your appointment hassle-free.</p>
+    <div class="speciality-list">
+        <div class="speciality-item" data-specialty="General physician" onclick="redirectToDoctors('General physician')">
+            <img src="image/generalPhysicaian.svg" alt="General Physician">
+            <p>General physician</p>
+        </div>
+        <div class="speciality-item" data-specialty="Gynecologist" onclick="redirectToDoctors('Gynecologist')">
+            <img src="image/Gynecologist.svg" alt="Gynecologist">
+            <p>Gynecologist</p>
+        </div>
+        <div class="speciality-item" data-specialty="Dermatologist" onclick="redirectToDoctors('Dermatologist')">
+            <img src="image/dertalogisst.svg" alt="Dermatologist">
+            <p>Dermatologist</p>
+        </div>
+        <div class="speciality-item" data-specialty="Pediatricians" onclick="redirectToDoctors('Pediatricians')">
+            <img src="image/Pediatricians.svg" alt="Pediatricians">
+            <p>Pediatricians</p>
+        </div>
+        <div class="speciality-item" data-specialty="Neurologist" onclick="redirectToDoctors('Neurologist')">
+            <img src="image/Neurologist.svg" alt="Neurologist">
+            <p>Neurologist</p>
+        </div>
+        <div class="speciality-item" data-specialty="Gastroenterologist" onclick="redirectToDoctors('Gastroenterologist')">
+            <img src="image/Gastroenterologist.svg" alt="Gastroenterologist">
+            <p>Gastroenterologist</p>
+        </div>
+    </div>
+</div>
+
+
+                <!-- Add this section to your homepage.html -->
+        <div class="doctors-section">
+            <h2>Top Doctors to Book</h2>
+            <p>Simply browse through our extensive list of trusted doctors.</p>
+            <div class="doctors-list">
+                <!-- Doctor Card 1 -->
+                <a href="doctor-profile.html" class="doctor-card" data-available="true">
+                    <img src="image/doc1.png" alt="Dr. Andrew Williams">
+                    <div class="doctor-info">
+                        <span class="availability">Available</span>
+                        <h3>Dr. Andrew Williams</h3>
+                        <p>Gastroenterologist</p>
+                    </div>
+                </a>
+                <!-- Doctor Card 2 -->
+                <a href="doctor-profile.html" class="doctor-card" data-available="true">
+                    <img src="image/doc2.png" alt="Dr. Christopher Davis">
+                    <div class="doctor-info">
+                        <span class="availability">Available</span>
+                        <h3>Dr. Christopher Davis</h3>
+                        <p>General physician</p>
+                    </div>
+                </a>
+                <!-- Doctor Card 3 -->
+                <a href="doctor-profile.html" class="doctor-card" data-available="true">
+                    <img src="image/doc3.png" alt="Dr. Timothy White">
+                    <div class="doctor-info">
+                        <span class="availability">Available</span>
+                        <h3>Dr. Timothy White</h3>
+                        <p>Gynecologist</p>
+                    </div>
+                </a>
+                <!-- Doctor Card 4 -->
+                <a href="doctor-profile.html" class="doctor-card" data-available="true">
+                    <img src="image/doc4.png" alt="Dr. Ava Mitchell">
+                    <div class="doctor-info">
+                        <span class="availability">Available</span>
+                        <h3>Dr. Ava Mitchell</h3>
+                        <p>Dermatologist</p>
+                    </div>
+                </a>
+                <!-- Doctor Card 5 -->
+                <a href="doctor-profile.html" class="doctor-card" data-available="false">
+                    <img src="image/doc5.png" alt="Dr. Jeffrey King">
+                    <div class="doctor-info">
+                        <span class="availability">Not Available</span>
+                        <h3>Dr. Jeffrey King</h3>
+                        <p>Pediatricians</p>
+                    </div>
+                </a>
+            </div>
+            <!-- More Button -->
+            <div class="more-button">
+                <a href="all-doctors.html">More</a>
+            </div>
+        </div>
+
+
+        <div class="cta-section">
+            <div class="cta-content">
+                <h2>Book Appointment <br> With 100+ Trusted Doctors</h2>
+                <button onclick="window.location.href='create-account.html'">Create account</button>
+            </div>
+            <div class="cta-image">
+                <img src="image/appointment_img-DzbZlMsi.png" alt="Doctor">
+            </div>
+        </div>
+
+
+<script src="script.js"></script>
+        <script>
+        function toggleMenu() {
+            const navItem = document.querySelector('.nav-item');
+            navItem.classList.toggle('show');
+        }
+
+        function redirectToDoctors(specialty) {
+            // Redirect to all-doctors.html with the selected specialty as a query parameter
+            window.location.href = `all-doctors.html?specialty=${encodeURIComponent(specialty)}`;
+        }
+    </script>
+
+
+
+</body>
+</html>
